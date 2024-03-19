@@ -1,0 +1,26 @@
+.content{
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+.category{
+  width: 200rpx;
+  height: 100vh;
+  background: #ffffff;
+  font-size: 30rpx;
+  border-right: 3rpx solid#dddddd;
+}
+
+.category-item{
+  border-bottom: 3rpx solid #dddddd;
+  height: 10vh;
+  line-height: 100rpx;
+  text-align: center;
+}
+
+::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+  color: transparent;
+}

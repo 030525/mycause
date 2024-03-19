@@ -1,0 +1,5 @@
+<scroll-view   scroll-y="true" class="category">
+  <view wx:for="{{ list }}" class="category-item" wx:key="id">
+    <view>{{item.name}}</view>
+  </view>
+</scroll-view>

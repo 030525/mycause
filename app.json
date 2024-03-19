@@ -1,6 +1,8 @@
 {
   "pages": [
-    "pages/user/index"
+    "pages/user/index",
+    "pages/home/index",
+    "pages/message/index"
   ],
   "window": {
     "navigationBarTextStyle": "black",
@@ -10,5 +12,24 @@
   "style": "v2",
   "componentFramework": "glass-easel",
   "sitemapLocation": "sitemap.json",
-  "lazyCodeLoading": "requiredComponents"
+  "lazyCodeLoading": "requiredComponents",
+
+  "tabBar": {
+
+    "borderStyle":"black",
+    "list": [
+      {
+        "pagePath":"pages/home/index",
+        "text": "首页"
+      },
+      {
+        "pagePath":"pages/message/index",
+        "text": "消息"
+      },
+      {
+        "pagePath":"pages/user/index",
+        "text": "个人"
+      }
+    ]
+  }
 }
