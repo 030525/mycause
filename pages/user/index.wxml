@@ -19,6 +19,8 @@
     </view>
   </view>
 
+  <view class="contract">设置</view>
+  <view class="contract">使用帮助</view>
   <view class="contract">联系客服</view>
-  <view class="login">退出登陆</view>
+  <view class="contract">退出登陆</view>
 </view>

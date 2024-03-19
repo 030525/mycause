@@ -1,5 +1,20 @@
-<scroll-view   scroll-y="true" class="category">
-  <view wx:for="{{ list }}" class="category-item" wx:key="id">
-    <view>{{item.name}}</view>
+<view style="display: flex; ">
+  <scroll-view   scroll-y="true" class="category">
+    <view wx:for="{{ list }}" class="category-item" wx:key="id">
+      <view>{{item.name}}</view>
+    </view>
+  </scroll-view>
+
+<block>
+
+<view class="right">
+  <view wx:if="{{ selectitem == 1}}" class="right-items">
+    <view wx:for="{{ place }}" wx:key="id" >
+        <view class="one-item">{{item.name}}</view>
+    </view>
   </view>
-</scroll-view>
+</view>
+
+</block>
+</view>
+

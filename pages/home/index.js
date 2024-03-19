@@ -5,12 +5,20 @@ Page({
    * 页面的初始数据
    */
   data: {
+    selectitem:1,
     list: [
       { id: 1, name: '热门' },
       { id: 2, name: '地点' },
       { id: 3, name: '类型' },
-      { id: 3, name: '耗时' },
+      { id: 4, name: '报酬' },
     ],
+    place:[
+      { id: 1, name: '一粟堂' },
+      { id: 2, name: '三清园' },
+      { id: 3, name: '五味轩' },
+      { id: 4, name: '七品居' },
+      { id: 5, name: '九华厅' },
+    ]
   },
 
 

@@ -81,21 +81,7 @@
 
 .contract{
   position: relative;
-  margin-top: 30rpx;
-  left: 5%;
-  background: #ffffff;
-  width: 90%;
-  height: 8vh;
-  border-radius: 5%;
-  line-height: 3;
-  text-align: center;
-  font-weight: bold;
-  font-size: larger;
-}
-
-.login{
-  position: relative;
-  margin-top: 50rpx;
+  margin-top: 20rpx;
   left: 5%;
   background: #ffffff;
   width: 90%;

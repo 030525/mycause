@@ -5,6 +5,7 @@
 }
 
 .category{
+  flex: 1;
   width: 200rpx;
   height: 100vh;
   background: #ffffff;
@@ -23,4 +24,25 @@
   width: 0;
   height: 0;
   color: transparent;
+}
+
+.right{
+  width: 550rpx;
+  background: #dddddd;
+  height: 100vh;
+}
+
+.right-items{
+  display: flex;
+  flex-wrap: wrap;
+  align-self:flex-start;
+}
+
+.one-item{
+  text-align: center;
+  line-height: 5;
+  width: 177rpx;
+  height: 177rpx;
+  border-right: 3px solid #eee;
+  border-bottom: 3px solid #eee;
 }
