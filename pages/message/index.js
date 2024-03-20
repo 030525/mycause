@@ -1,23 +1,21 @@
 // pages/message/index.js
+const app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
-  data: {
-
+	data: {
+	},
+  list:{
+    page:0,
+    size:10,
+    total:0
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad(options) {
-
+  
+  onLoad(){
+    this.getlist()
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
   onReady() {
 
   },
@@ -62,5 +60,21 @@ Page({
    */
   onShareAppMessage() {
 
+  },
+
+  getlist(){
+    wx.showLoading({
+      title: '加载中...',
+    })
+
+    wx.request({
+      url: '',
+      success(res){
+
+      },
+      complete(){
+        wx.hideLoading()
+      }
+    })
   }
 })

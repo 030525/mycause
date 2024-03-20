@@ -1,12 +1,13 @@
 // pages/user/index.js
 import { view_or_set_img } from '../../utils/img.js';
-
+const app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    startY: 0,
     background:"",
     head:""
   },
@@ -50,7 +51,6 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh() {
-
   },
 
   /**
@@ -72,7 +72,6 @@ Page({
 
 
   background(e){
-
     view_or_set_img('查看图片','更换背景',this.data.background,(newimg)=>{
        this.setData({
          background:newimg
@@ -86,6 +85,52 @@ Page({
       this.setData({
         head:newimg
       })
+    })
+  },
+  personality(){
+    wx.showActionSheet({
+      itemList: ['查看个人简介','上传简介(markdown)'],
+  
+      success(res) {
+        if(res.tapIndex == 0)
+        {
+          let result = app.towxml(`# Markdown 
+          ## YOU KNOW HOW WE DO IT`,'markdown',{
+          });
+        }
+        else if(res.tapIndex == 1)
+        {
+         
+        }
+      }
+    })
+  },
+  help(){
+    wx.showActionSheet({
+      itemList: ['客服','使用帮助'], 
+  
+      success(res) {
+        if(res.tapIndex == 0)
+        {
+        }
+        else if(res.tapIndex == 1)
+        {     
+        }
+      }
+    })
+  },
+  setting(){
+    wx.showActionSheet({
+      itemList: ['退出登陆'],
+  
+      success(res) {
+        if(res.tapIndex == 0)
+        {
+        }
+        else if(res.tapIndex == 1)
+        {        
+        }
+      }
     })
   }
 })

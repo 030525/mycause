@@ -1,4 +1,4 @@
-<view class="page">
+<view class="page" bindscrolltoupper="handleScrollToUpper" bindtouchmove="onTouchMove">
 
   <view class="top">
       <image src="{{background}}"  catchtap="background" class="back" mode="aspectFill"></image>
@@ -11,16 +11,15 @@
     </view>
 
     <view class="row">
-      <view class="state">已编辑</view>
       <view class="state">待审核</view>
       <view class="state">已发布</view>
       <view class="state">仲裁中</view>
-      <view class="state1">已完成</view>
+      <view class="state">已完成</view>
+      <view class="state1">失效</view>
     </view>
   </view>
 
-  <view class="contract">设置</view>
-  <view class="contract">使用帮助</view>
-  <view class="contract">联系客服</view>
-  <view class="contract">退出登陆</view>
+  <view class="contract" bind:tap="personality">个性</view>
+  <view class="contract" bind:tap="help">帮助</view>
+  <view class="contract" bind:tap="setting">设置</view>
 </view>

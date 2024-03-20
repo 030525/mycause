@@ -1,20 +1,74 @@
 <view style="display: flex; ">
   <scroll-view   scroll-y="true" class="category">
-    <view wx:for="{{ list }}" class="category-item" wx:key="id">
+    <view wx:for="{{ list }}" class="category-item {{item.select ? 'select' : ''}}" wx:key="id" bind:tap="change_catagory" data-id="{{ item.id }}">
       <view>{{item.name}}</view>
     </view>
   </scroll-view>
 
-<block>
 
-<view class="right">
+<scroll-view   scroll-y="true" class="right">
   <view wx:if="{{ selectitem == 1}}" class="right-items">
-    <view wx:for="{{ place }}" wx:key="id" >
+
+    <view wx:if="{{ selectposition == -1}}" wx:for="{{ position_type }}" wx:key="id" >
+      <view class="one-item" bind:tap="change_position" data-id="{{ item.id }}">{{item.name}}</view>
+    </view>
+
+    <view wx:if="{{ selectposition == 0}}" wx:for="{{ canteen }}" wx:key="id" >
+      <view class="one-item">{{item.name}}</view>
+    </view>
+
+    <view wx:if="{{ selectposition == 1}}" wx:for="{{ dormitory }}" wx:key="id" >
+      <view class="one-item">{{item.name}}</view>
+    </view>
+
+    <view wx:if="{{ selectposition == 2}}" wx:for="{{ classroom }}" wx:key="id" >
+      <view class="one-item">{{item.name}}</view>
+    </view>
+
+    <view wx:if="{{ selectposition == 3}}" wx:for="{{ admin }}" wx:key="id" >
+      <view class="one-item">{{item.name}}</view>
+    </view>
+
+    <view wx:if="{{ selectposition == 4}}" wx:for="{{ gym }}" wx:key="id" >
+      <view class="one-item">{{item.name}}</view>
+    </view>
+
+    <view wx:if="{{ selectposition == 5}}" wx:for="{{ station }}" wx:key="id" >
+      <view class="one-item">{{item.name}}</view>
+    </view>
+
+    <view wx:if="{{ selectposition == 6}}" wx:for="{{ door }}" wx:key="id" >
+      <view class="one-item">{{item.name}}</view>
+    </view>
+
+    <view wx:if="{{ selectposition == 7}}" wx:for="{{ other }}" wx:key="id" >
+      <view class="one-item">{{item.name}}</view>
+    </view>
+
+  </view>
+
+  <view wx:elif="{{ selectitem == 2}}" class="right-items">
+    <view wx:for="{{ type }}" wx:key="id" >
         <view class="one-item">{{item.name}}</view>
     </view>
   </view>
-</view>
 
-</block>
+  <view wx:elif="{{ selectitem == 3}}" class="right-items">
+    <view wx:for="{{ pay }}" wx:key="id" >
+        <view class="one-item">{{item.name}}</view>
+    </view>
+  </view>
+
+  <view wx:elif="{{ selectitem == 4}}" class="right-items">
+    <view wx:for="{{ time }}" wx:key="id" >
+        <view class="one-item">{{item.name}}</view>
+    </view>
+  </view>
+
+  <view class="edit">+</view>
+</scroll-view>
+
+
+
 </view>
 
